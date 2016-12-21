@@ -1,0 +1,18 @@
+<ion-header class="poker-global-header">
+  <ion-navbar color="navbar">
+    <ion-title>{{title}}</ion-title>
+  </ion-navbar>
+</ion-header>
+<ion-content class="racing-list-content">
+  <ion-list>
+    <ion-list-header>
+      {{title}}
+    </ion-list-header>
+    <ion-item *ngFor="let item of list">
+      <img class="racing-list-img" src="../../assets/logo/horse.png" alt="">
+      {{item.name}}
+      <button ion-button clear item-right>{{item.time}}</button>
+      <ion-icon name="arrow-forward" item-right></ion-icon>
+    </ion-item>
+  </ion-list>
+</ion-content>

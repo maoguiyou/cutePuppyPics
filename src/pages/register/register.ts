@@ -43,7 +43,7 @@ export class RegisterPage {
       console.log(data);
       if(data.dat.code==0){
         loader.dismiss();
-        this.navCtrl.push(TermsPage);
+        this.navCtrl.push(TermsPage,{'acctLogin':data.dat.acctLogin});
         console.log('欢迎：'+ data.dat.acctLogin.NickName);
       }
     }

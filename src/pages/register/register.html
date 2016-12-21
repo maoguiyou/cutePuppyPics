@@ -1,9 +1,13 @@
 <ion-header class="poker-global-header">
   <ion-navbar color="navbar">
-    <ion-icon (click)="changeLanguageService.openMenu()" name="menu" role="img" class="icon icon-ios ion-ios-menu" aria-label="menu"></ion-icon>
+    <button (click)="changeLanguageService.openMenu()" ion-button icon-only menuToggle>
+      <ion-icon  name="menu" role="img"  aria-label="menu"></ion-icon>
+    </button>
+
     <ion-title>
       <img class="logo-img" src="../../assets/logo/logo.png" alt="">
     </ion-title>
+
   </ion-navbar>
 </ion-header>
 

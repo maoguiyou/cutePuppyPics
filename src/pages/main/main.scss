@@ -1,0 +1,49 @@
+ion-content{
+  &.main-content{
+    background: #e4e4e4;
+  }
+  //头部样式
+  .main-header{
+    padding: 2.2rem 0;
+    color:white;
+    background: #263847;
+    .logo-img{
+      width:10rem;
+    }
+    .user-img {
+      width:7rem;
+      height:4rem;
+      border-radius:50%;
+      background-color: transparent;
+      text-align: center;
+      img{
+        width:4rem;
+        height:4rem;
+        display: inline-block;
+        border-radius:50%;
+      }
+    }
+    .user-name{
+      display:block;
+      width:7rem;
+      text-align: center;
+      float: right;
+    }
+    ul{
+      list-style: none;
+      padding-left:10px;
+      li{
+        line-height:2.3rem;
+        height: 2.3rem;
+        text-align: left;
+      }
+    }
+  }
+  //列表样式
+  ion-list{
+    .item{
+      color:#263847;
+    }
+  }
+}
+

@@ -7,8 +7,10 @@ import { AboutPage } from '../pages/about/about';
 import { ChangeLanguageService } from '../shared/change-language-service/change-language-service';
 import { ContactPage } from '../pages/contact/contact';
 import { HomePage } from '../pages/home/home';
+import { MainPage } from '../pages/main/main';
 import { MePage } from '../pages/me/me';
 import { RegisterPage } from '../pages/register/register';
+import { RacingListPage } from '../pages/racing-list/racing-list';
 import { SocketService } from '../shared/socket-service/socket-service';
 import { TabsPage } from '../pages/tabs/tabs';
 import { TermsPage } from '../pages/terms/terms';
@@ -19,8 +21,10 @@ import { TermsPage } from '../pages/terms/terms';
     AboutPage,
     ContactPage,
     HomePage,
+    MainPage,
     MePage,
     RegisterPage,
+    RacingListPage,
     TermsPage,
     TabsPage
   ],
@@ -34,8 +38,10 @@ import { TermsPage } from '../pages/terms/terms';
     AboutPage,
     ContactPage,
     HomePage,
+    MainPage,
     MePage,
     RegisterPage,
+    RacingListPage,
     TermsPage,
     TabsPage
   ],
