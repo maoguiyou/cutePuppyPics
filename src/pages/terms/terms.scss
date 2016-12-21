@@ -1,0 +1,25 @@
+ion-card{
+  position: relative;
+  top: 40%;
+  transform: translateY(-50%);
+  ion-card-content{
+    ion-item.item{
+      padding-left:0;
+    }
+    .button-group{
+      .terms-agree,
+      .terms-disagree{
+        width:45%;
+        display:block;
+        line-height:4.6rem;
+        height:4.6rem;
+      }
+      .terms-agree{
+        float: left;
+      }
+      .terms-disagree{
+        float: right;
+      }
+    }
+  }
+}

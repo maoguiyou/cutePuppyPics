@@ -1,0 +1,35 @@
+<ion-header class="poker-global-header">
+  <ion-navbar color="navbar">
+    <ion-icon (click)="changeLanguageService.openMenu()" name="menu" role="img" class="icon icon-ios ion-ios-menu" aria-label="menu"></ion-icon>
+    <ion-title>
+      <img class="logo-img" src="../../assets/logo/logo.png" alt="">
+    </ion-title>
+  </ion-navbar>
+</ion-header>
+
+<ion-content padding>
+  <ion-list class="login-form">
+    <ion-item>
+      <ion-label>Username</ion-label>
+      <ion-input [ngModel]="userName| uppercase" (ngModelChange)="userName=$event" type="text"></ion-input>
+    </ion-item>
+
+    <ion-item>
+      <ion-label>Password</ion-label>
+      <ion-input [(ngModel)]="passWord" type="password"></ion-input>
+    </ion-item>
+
+    <ion-item>
+      <ion-label>Remember Username</ion-label>
+      <ion-checkbox color="navbar" checked="true"></ion-checkbox>
+    </ion-item>
+
+    <div class="btn-login">
+      <button (click)="login()" block ion-button color="btn-login">log in</button>
+    </div>
+  </ion-list>
+</ion-content>
+
+<ion-footer>
+  <div class="footer-text">Copyright 2016 TURF7.com v1.0</div>
+</ion-footer>

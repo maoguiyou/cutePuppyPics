@@ -1,0 +1,22 @@
+.poker-global-header{
+  .ion-ios-menu{
+    color:#fff;
+    font-size: 3rem;
+    padding-left:1rem;
+  }
+
+  .logo-img{
+    width:100px;
+  }
+}
+page-register{
+  .login-form{
+    position: relative;
+    top: 40%;
+    transform: translateY(-50%);
+  }
+  .btn-login{
+    text-align: center;
+    margin-top:30px;
+  }
+}

@@ -1,0 +1,37 @@
+<ion-header class="poker-global-header">
+  <ion-navbar color="navbar">
+    <ion-icon (click)="ChangeLanguageService.openMenu()" role="img"></ion-icon>
+    <ion-title>
+      <img class="logo-img" src="../../assets/logo/logo.png" alt="">
+    </ion-title>
+  </ion-navbar>
+</ion-header>
+
+<ion-content>
+  <ion-card>
+    <ion-card-header>
+      TURF7 Gaming Rules, Terms & Conditions.
+    </ion-card-header>
+
+    <ion-card-content>
+      <!-- Add card content here! -->
+      <p>1. By using and/or visiting any section (including sub-domains) of the TURF7.com website
+        or any other websites or applications that we own (the “Website”) and/or registering on
+        the Website, you agree to be bound by these Terms and Conditions applicable to our betting
+        or gaming products as further referenced at paragraph
+        2 below (together the "Terms"), and are deemed to have accepted and understood all the Terms.</p>
+      <ion-item>
+        <ion-label>I agree to the Gaming Rules.</ion-label>
+        <ion-checkbox [(ngModel)]="isAgree" color="navbar"></ion-checkbox>
+      </ion-item>
+      <div class="button-group clearfix">
+        <button [disabled]="!isAgree" (click)="termsAgree()" class="terms-agree" ion-button color="yellow">Agree</button>
+        <button (click)="termsDisagree()" class="terms-disagree" ion-button color="btn-login">Disagree</button>
+      </div>
+    </ion-card-content>
+  </ion-card>
+</ion-content>
+
+<ion-footer>
+  <div class="footer-text">Copyright 2016 TURF7.com v1.0</div>
+</ion-footer>
