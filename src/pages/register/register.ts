@@ -4,8 +4,11 @@ import Encryption from 'sha.js/index';
 import { NavController,LoadingController } from 'ionic-angular';
 
 import  { ChangeLanguageService } from '../../shared/change-language-service/change-language-service';
+import { GetServerTimeService } from '../../shared/get-server-time-service/get-server-time-service';
 import  { LoginService } from '../../shared/login-service/login-service';
 import  { SocketService } from '../../shared/socket-service/socket-service';
+
+
 import  { TermsPage } from '../terms/terms';
 @Component({
   selector:'page-register',
@@ -18,6 +21,7 @@ export class RegisterPage {
     public navCtrl: NavController,
     private loginService:LoginService,
     private changeLanguageService:ChangeLanguageService,
+    private getServerTimeService:GetServerTimeService,
     private SocketService:SocketService
   ) { }
   userName:string='ng3';
@@ -45,8 +49,9 @@ export class RegisterPage {
       var data=this.SocketService.getObject(e.data);
       console.log('registerPage');
       console.log(data);
-      if(data.dat.code==0){
+      if(data.command == 1 && data.dat.code==0){
         this.loginService.setLoginData(data.dat);//把登录得到的对象存储到login-service类中
+        this.getServerTimeService.getServerTime().then(time=>console.log(time));//调用服务获取服务器时间
         loader.dismiss();
         this.navCtrl.push(TermsPage);
       }
