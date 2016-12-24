@@ -1,7 +1,9 @@
 import { Component } from '@angular/core';
-import { NavController,NavParams } from 'ionic-angular';
+import { NavController } from 'ionic-angular';
 
-import { MainPage } from '../main/main';
+import { LoginService } from '../../shared/login-service/login-service';
+
+import { TabsPage } from '../tabs/tabs';
 
 @Component({
   templateUrl:'terms.html'
@@ -10,16 +12,14 @@ import { MainPage } from '../main/main';
 export class TermsPage {
   constructor(
     private navCtrl:NavController,
-    private navParams: NavParams
+    private loginService:LoginService
   ){ }
-
-  acctLogin =this.navParams.get('acctLogin');//获取用户信息对象
-
+  acctLogin=this.loginService.getLoginData().acctLogin;
   //点击同意按钮
   isAgree:boolean = true;
     termsAgree():void {
       console.log(this.isAgree);
-      this.navCtrl.push(MainPage,{"acctLogin":this.acctLogin});//传递用户信息对象
+      this.navCtrl.push(TabsPage);//跳转到tabs页面
     }
   //点击不同意按钮返回登录页
     termsDisagree():void {

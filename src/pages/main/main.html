@@ -10,17 +10,20 @@
       </ion-col>
       <ion-col no-padding width-66>
         <ul>
-          <li>可用余额：{{acctLogin.CrLimit}}</li>
-          <li>盈利：{{acctLogin.BalAmt}}</li>
-          <li>未结算：{{acctLogin.PenAmt}}</li>
+          <li>可用余额：{{acctLogin.CrLimit | number:'1.2-2'}} </li>
+          <li>盈利 {{acctLogin.BalAmt| number:'1.2-2'}}</li>
+          <li>未结算：{{acctLogin.PenAmt| number:'1.2-2'}}</li>
         </ul>
       </ion-col>
     </ion-row>
   </ion-grid>
   <ion-list>
     <button *ngFor="let item of list" ion-item icon-left (click)="racingList(item.name)">
-      <ion-icon name="{{item.iconName}}"></ion-icon>
+      <!--<ion-icon name="{{item.iconName}}"></ion-icon>-->
+      <img class="main-list-icon" src="../../assets/logo/{{item.iconName}}.png" alt="">
+
       {{ item.name }}
+
     </button>
   </ion-list>
 </ion-content>

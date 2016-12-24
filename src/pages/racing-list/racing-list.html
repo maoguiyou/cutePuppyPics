@@ -8,10 +8,12 @@
     <ion-list-header>
       {{title}}
     </ion-list-header>
-    <ion-item *ngFor="let item of list">
-      <img class="racing-list-img" src="../../assets/logo/horse.png" alt="">
-      {{item.name}}
-      <button ion-button clear item-right>{{item.time}}</button>
+    <ion-item *ngFor="let item of upcomingList">
+      <img class="racing-list-img" src="../../assets/logo/{{item.GameType}}.png" alt="">
+       <span class="racing-list-R">{{item.R}}</span> {{item.Venue}}  ({{item.Country}})
+      <button color="navbar" ion-button clear item-right>
+        <count-down [startTime]="item.SuspendTime"></count-down>
+      </button>
       <ion-icon name="arrow-forward" item-right></ion-icon>
     </ion-item>
   </ion-list>

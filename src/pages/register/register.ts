@@ -4,6 +4,7 @@ import Encryption from 'sha.js/index';
 import { NavController,LoadingController } from 'ionic-angular';
 
 import  { ChangeLanguageService } from '../../shared/change-language-service/change-language-service';
+import  { LoginService } from '../../shared/login-service/login-service';
 import  { SocketService } from '../../shared/socket-service/socket-service';
 import  { TermsPage } from '../terms/terms';
 @Component({
@@ -13,20 +14,22 @@ import  { TermsPage } from '../terms/terms';
 
 export class RegisterPage {
   constructor(
-    public loadingCtrl: LoadingController,
+    private loadingCtrl: LoadingController,
     public navCtrl: NavController,
+    private loginService:LoginService,
     private changeLanguageService:ChangeLanguageService,
     private SocketService:SocketService
   ) { }
-  userName:string='MYRGZGY';
-  passWord:string='aaa111';
+  userName:string='ng3';
+  passWord:string='aaaaa';
 
   //login
   login():any {
+    //配置显示加载信息
     let loader=this.loadingCtrl.create({
       spinner: 'ios'
     });
-    loader.present();
+    loader.present();//显示加载层
     //请求参数
     var req={
       "AcctId":this.userName,
@@ -40,11 +43,12 @@ export class RegisterPage {
     this.SocketService.getSocket().send(str);
     this.SocketService.getSocket().onmessage=(e)=>{
       var data=this.SocketService.getObject(e.data);
+      console.log('registerPage');
       console.log(data);
       if(data.dat.code==0){
+        this.loginService.setLoginData(data.dat);//把登录得到的对象存储到login-service类中
         loader.dismiss();
-        this.navCtrl.push(TermsPage,{'acctLogin':data.dat.acctLogin});
-        console.log('欢迎：'+ data.dat.acctLogin.NickName);
+        this.navCtrl.push(TermsPage);
       }
     }
   }

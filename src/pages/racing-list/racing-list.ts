@@ -10,6 +10,7 @@ export class RacingListPage {
     private navParams: NavParams
   ){ }
   title:string =this.navParams.get('title');//页面跳转传过来的值
+  upcomingList = this.navParams.get("upcomingList");//获取upcoming对象
 
   list=[
     {"name":"R1 阳光海岸 (澳)","time":"01:11"},

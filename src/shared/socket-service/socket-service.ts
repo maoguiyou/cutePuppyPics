@@ -2,7 +2,8 @@ import { Injectable } from '@angular/core';
 
 @Injectable()
 export class SocketService {
-  private socketUrl = 'ws://m.txbet.com:8080/';
+  // private socketUrl = 'ws://m.txbet.com:8080/'; //正式上的地址
+  private socketUrl = 'ws://www.0000tx.net:8080/';//测试上的地址
   private socket = new WebSocket(this.socketUrl);//创建socket连接
   constructor() {
     this.socket.onopen = this.onOpen();
