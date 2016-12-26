@@ -1,4 +1,4 @@
-import { Component,Input, OnInit,Pipe  } from '@angular/core';
+import { Component,Input  } from '@angular/core';
 import { DatePipe,DecimalPipe  } from '@angular/common';
 
 import { GetServerTimeService } from '../../shared/get-server-time-service/get-server-time-service';
@@ -10,9 +10,9 @@ import { GetServerTimeService } from '../../shared/get-server-time-service/get-s
   providers:[DatePipe,DecimalPipe]
 })
 
-export class CountDownComponent implements OnInit{
+export class CountDownComponent{
   constructor(
-    private dataPipe:DatePipe,
+    private datePipe:DatePipe,
     private decimalPipe :DecimalPipe,
     private getServerTimeService:GetServerTimeService
   ){ }
@@ -31,14 +31,16 @@ export class CountDownComponent implements OnInit{
         "timeText":timeString,
         "textCorlor":{"color":"#FF9A02"}
       }
-    }else{
+    }else if(this.countDownSecond<30){
       return {
         "timeText":this.decimalPipe.transform(this.countDownMinute,'2.0-0') +" min",
         "textCorlor":{}
       }
+    }else{
+      return {
+        "timeText":this.datePipe.transform(this.startTime,'hh:mm'),
+        "textCorlor":{}
+      }
     }
-  }
-  ngOnInit():void {
-
   }
 }

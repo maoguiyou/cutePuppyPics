@@ -1,4 +1,4 @@
-import { Injectable,OnInit } from '@angular/core';
+import { Injectable } from '@angular/core';
 
 import { LoginService } from '../../shared/login-service/login-service';
 import { SocketService } from '../../shared/socket-service/socket-service';

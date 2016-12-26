@@ -3,7 +3,6 @@ import { Platform } from 'ionic-angular';
 import { StatusBar, Splashscreen } from 'ionic-native';
 
 import { RegisterPage } from '../pages/register/register';
-import { TabsPage } from '../pages/tabs/tabs';
 
 
 @Component({

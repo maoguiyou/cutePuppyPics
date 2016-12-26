@@ -4,7 +4,6 @@ import { NavController } from 'ionic-angular';
 import { LoginService } from '../../shared/login-service/login-service';
 
 import { TabsPage } from '../tabs/tabs';
-import { MainPage } from '../main/main';
 
 @Component({
   templateUrl:'terms.html'

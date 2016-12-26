@@ -18,11 +18,15 @@
     </ion-row>
   </ion-grid>
   <ion-list>
-    <button *ngFor="let item of list" ion-item icon-left (click)="racingList(item.name)">
+    <button *ngFor="let item of list" ion-item icon-left (click)="mainRouter({
+    title:item.title,
+    gameType:item.gameType,
+    targetPage:item.targetPage
+    })">
       <!--<ion-icon name="{{item.iconName}}"></ion-icon>-->
       <img class="main-list-icon" src="../../assets/logo/{{item.iconName}}.png" alt="">
 
-      {{ item.name }}
+      {{ item.title }}
 
     </button>
   </ion-list>

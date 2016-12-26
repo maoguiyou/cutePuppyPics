@@ -9,7 +9,9 @@ import { SocketService } from '../shared/socket-service/socket-service';
 
 import { MyApp } from './app.component';
 import { AboutPage } from '../pages/about/about';
+import { AccountPage } from '../pages/account/account';
 import { ContactPage } from '../pages/contact/contact';
+import { CountryListPage } from '../pages/country-list/country-list';
 import { CountDownComponent } from '../shared/count-down-component/count-down-component';
 import { HomePage } from '../pages/home/home';
 import { MainPage } from '../pages/main/main';
@@ -23,7 +25,9 @@ import { TermsPage } from '../pages/terms/terms';
   declarations: [
     MyApp,
     AboutPage,
+    AccountPage,
     ContactPage,
+    CountryListPage,
     CountDownComponent,
     HomePage,
     MainPage,
@@ -41,7 +45,9 @@ import { TermsPage } from '../pages/terms/terms';
   entryComponents: [
     MyApp,
     AboutPage,
+    AccountPage,
     ContactPage,
+    CountryListPage,
     CountDownComponent,
     HomePage,
     MainPage,

@@ -1,0 +1,85 @@
+<ion-header class="poker-global-header">
+  <ion-navbar color="navbar">
+    <ion-title>{{pageAcceptObj.title}}</ion-title>
+  </ion-navbar>
+</ion-header>
+
+<ion-content>
+
+  <div *ngIf="acctDetails">
+    <ion-item-group>
+      <ion-item-divider color="light">用户详情</ion-item-divider>
+      <ion-item>
+        <ion-label>账号 </ion-label>
+        <ion-note item-right>{{acctDetails.LoginId}}</ion-note>
+      </ion-item>
+
+      <ion-item>
+        <ion-label>昵称 </ion-label>
+        <ion-note item-right>{{acctDetails.NickName}}</ion-note>
+      </ion-item>
+
+      <ion-item>
+        <ion-label>状态 </ion-label>
+        <ion-note item-right>{{acctDetails.Status}}</ion-note>
+      </ion-item>
+
+      <ion-item>
+        <ion-label>手机 </ion-label>
+        <ion-note item-right>{{acctDetails.MobileNumber}}</ion-note>
+      </ion-item>
+
+      <ion-item>
+        <ion-label>用户级别 </ion-label>
+        <ion-note item-right>{{acctDetails.AccountLevel}}</ion-note>
+      </ion-item>
+    </ion-item-group>
+
+    <ion-item-group>
+      <ion-item-divider color="light">用户信用详情</ion-item-divider>
+      <ion-item>
+        <ion-label>每周的信用额度 </ion-label>
+        <ion-note item-right>{{acctDetails.CurrId}} {{acctDetails.WeeklyCreditLimit|number : '1.2-2'}}</ion-note>
+      </ion-item>
+
+      <ion-item>
+        <ion-label>每日上限 </ion-label>
+        <ion-note item-right>{{acctDetails.CurrId}} {{acctDetails.DailyExposureLimit|number : '1.2-2'}}</ion-note>
+      </ion-item>
+
+      <ion-item>
+        <ion-label>当前剩余上限 </ion-label>
+        <ion-note item-right>{{acctDetails.CurrId}} {{acctDetails.CrLimit|number : '1.2-2'}}</ion-note>
+      </ion-item>
+    </ion-item-group>
+
+    <ion-item-group>
+      <ion-item-divider color="light">产品细节设计</ion-item-divider>
+      <ion-item>
+        <ion-label>税率 </ion-label>
+        <ion-note item-right>{{acctDetails.CurrRate}}</ion-note>
+      </ion-item>
+
+      <ion-item>
+        <ion-label>最小下单 </ion-label>
+        <ion-note item-right>{{acctDetails.BetMin | number : '1.2-2'}}</ion-note>
+      </ion-item>
+
+      <ion-item>
+        <ion-label>最大下单 </ion-label>
+        <ion-note item-right>{{acctDetails.BetMax | number : '1.2-2'}}</ion-note>
+      </ion-item>
+
+      <ion-item>
+        <ion-label>最小吃单 </ion-label>
+        <ion-note item-right>{{acctDetails.EatMin | number : '1.2-2'}}</ion-note>
+      </ion-item>
+
+      <ion-item>
+        <ion-label>最大吃单 </ion-label>
+        <ion-note item-right>{{acctDetails.EatMax | number : '1.2-2'}}</ion-note>
+      </ion-item>
+    </ion-item-group>
+  </div>
+
+</ion-content>
