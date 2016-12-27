@@ -1,0 +1,25 @@
+<ion-menu persistent="true" [content]="mainMenu" id="menu1">
+
+  <ion-header>
+    <ion-toolbar color="btn-login">
+      <ion-title>{{acctLogin.NickName}}</ion-title>
+    </ion-toolbar>
+  </ion-header>
+
+  <ion-content color="btn-login">
+    <ion-list>
+      <ion-item (click)="changeLanguageService.openMenu()" menuClose="menu1" detail-none>
+        修改语言
+      </ion-item>
+      <ion-item (click)="changePassword()" menuClose="menu1" menuClose="menu1" detail-none>
+        修改密码
+      </ion-item>
+      <ion-item (click)="logOut()" menuClose="menu1">
+        退出
+      </ion-item>
+    </ion-list>
+  </ion-content>
+
+</ion-menu>
+
+<ion-nav [root]="root" #mainMenu></ion-nav>

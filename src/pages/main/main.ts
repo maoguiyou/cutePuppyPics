@@ -1,5 +1,5 @@
 import { Component } from '@angular/core';
-import { NavController } from 'ionic-angular';
+import { NavController,MenuController } from 'ionic-angular';
 
 import { LoginService } from '../../shared/login-service/login-service';
 
@@ -14,6 +14,7 @@ import { RacingListPage } from '../racing-list/racing-list';
 export class MainPage {
   constructor(
     private loginService:LoginService,
+    public menu: MenuController,
     private navCtrl:NavController
   ){ }
 

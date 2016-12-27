@@ -25,7 +25,7 @@ export class RegisterPage {
     private SocketService:SocketService
   ) { }
   userName:string='ng3';
-  passWord:string='aaaaa';
+  passWord:string='11111';
 
   //login
   login():any {

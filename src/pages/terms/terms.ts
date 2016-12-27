@@ -20,7 +20,6 @@ export class TermsPage {
     termsAgree():void {
       console.log(this.isAgree);
       this.navCtrl.push(TabsPage);//跳转到tabs页面
-      // this.navCtrl.push(MainPage);//跳转到main页面
     }
   //点击不同意按钮返回登录页
     termsDisagree():void {
